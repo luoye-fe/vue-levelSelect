@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多级联动菜单</title>
+</head>
+<body>
+	
+
+	<div id="app">
+		<m-level-select :config-data="config"></m-level-select>
+	</div>
+
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript" src="./levelSelect.js"></script>
+	<script type="text/javascript" src="./data.js"></script>
+	<script>
+		
+	var App = new Vue({
+		el: '#app',
+		data: {
+			config: {
+				data: districtData,
+				head: '请选择城市...'
+			}
+		},
+		components: {
+			'm-level-select': LevelSelect
+		}
+	})
+
+	</script>
+</body>
+</html>
