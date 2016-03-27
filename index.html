@@ -8,7 +8,7 @@
 	
 
 	<div id="app">
-		<m-level-select :config-data="config"></m-level-select>
+		<m-level-select :config-data.sync="config"></m-level-select>
 	</div>
 
 	<script type="text/javascript" src="./vue.js"></script>
@@ -21,7 +21,8 @@
 		data: {
 			config: {
 				data: districtData,
-				head: '请选择城市...'
+				head: '请选择城市...',
+				result: ''
 			}
 		},
 		components: {
